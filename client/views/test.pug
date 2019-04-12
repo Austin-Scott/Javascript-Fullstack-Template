@@ -1,7 +1,9 @@
 extends layouts/layout.pug
 include includes/tabs.pug
+include includes/modal.pug
 
 block content
+  +addModalSource
   p #{message}
   a(href='/test.txt') Test static file delivery.
   br/
@@ -14,3 +16,4 @@ block content
       p This is the content of Tab B!
     +addOtherTab('Tab C')
       p This is the content of Tab C!
+  +addModalCode
