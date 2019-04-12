@@ -1,5 +1,16 @@
 extends layouts/layout.pug
+include includes/tabs.pug
 
 block content
   p #{message}
   a(href='/test.txt') Test static file delivery.
+  br/
+  br/
+  +tabBar('Tab A', 'Tab B', 'Tab C')
+  +beginTabPanel
+    +addFirstTab('Tab A')
+      p This is the content of Tab A!
+    +addOtherTab('Tab B')
+      p This is the content of Tab B!
+    +addOtherTab('Tab C')
+      p This is the content of Tab C!
