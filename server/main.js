@@ -16,10 +16,10 @@ app.get('/', (req, res) => {
     res.render('index', { title: 'index page' })
 })
 app.get('/about', (req, res) => {
-    res.render('about', {title: 'About page'})
+    res.render('about', {title: 'About'})
 })
 app.get('/test', (req, res) => {
-    res.render('test', { title: 'View test', message: 'Views appear to be working' })
+    res.render('test', { title: 'Test', message: 'Views appear to be working' })
 })
 
 // Serve public static files
